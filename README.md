@@ -1,3 +1,3 @@
-![https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUZGDONYM4%2F20200217%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200217T123126Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f370033f802697a4e00a68c59cdd7993ed0b53c5d8c4dbf8df9725e516d539db]
+![https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUZGDONYM4%2F20200217%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200217T123126Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f370033f802697a4e00a68c59cdd7993ed0b53c5d8c4dbf8df9725e516d539db](HBNB)
 # AirBnB_clone
 Starting with the project
