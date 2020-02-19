@@ -32,3 +32,11 @@ class BaseModel:
     def save(self):
         """ Save: updates the public instace updated_at """
         self.updated_at = datetime.now()
+
+    def to_dict(self):
+        """Dictionary save"""
+        mydic = self.__dict__.copy()
+        mydic["created_at"] = self.created_at.isoformat()
+        mydic["updated_at"] = self.updated_at.isoformat()
+        mydic["__class__"] = self.__class__.__name__
+        return (mydic)
