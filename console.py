@@ -2,6 +2,7 @@
 """ HBNB Console """
 import cmd
 
+
 class HBNBCommand(cmd.Cmd):
     """ Class HBNB """
     prompt = "(hbnb) "
