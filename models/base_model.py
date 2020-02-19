@@ -23,6 +23,8 @@ class BaseModel:
                                                         )
                 else:
                     self.__dict__[k] = value
+        else:
+            models.storage.new(self)
 
     def __str__(self):
         """ Print the given message """
@@ -32,6 +34,7 @@ class BaseModel:
     def save(self):
         """ Save: updates the public instace updated_at """
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """Dictionary save"""
