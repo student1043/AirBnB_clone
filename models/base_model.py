@@ -23,10 +23,12 @@ class BaseModel:
                                                         )
                 else:
                     self.__dict__[k] = value
-        else:
-            models.storage.new(self)
 
     def __str__(self):
         """ Print the given message """
         return "[{}] ({}) {}".format(self.__class__.__name__,
                                      self.id, self.__dict__)
+
+    def save(self):
+        """ Save: updates the public instace updated_at """
+        self.updated_at = datetime.now()
