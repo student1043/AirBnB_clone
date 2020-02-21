@@ -130,6 +130,26 @@ class HBNBCommand(cmd.Cmd):
             storage.save()
         print("** no instance found **")
 
+    def do_all(self, inp):
+        """All instances"""
+        inst = storage.all()
+        list = []
+        if inp:
+            try:
+                Model = inp.split(" ")[0]
+                if Model in self.mycl:
+                    for i in inst:
+                        if i.split(".")[0] == Model:
+                            list.append(str(inst[i]))
+                    print(list)
+                else:
+                    raise NameError
+            except NameError:
+                print("** class doesn't exist **")
+        else:
+            for i in inst:
+                list.append(str(inst[i]))
+            print(list)
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
