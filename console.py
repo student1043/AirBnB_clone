@@ -151,5 +151,14 @@ class HBNBCommand(cmd.Cmd):
                 list.append(str(inst[i]))
             print(list)
 
+    def getCount(self, inp):
+        """Return number of instances"""
+        i = 0
+        obj = storage.all()
+        for v in obj.values():
+            if v.__class__.__name__ == inp:
+                i = i + 1
+        return (i)
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

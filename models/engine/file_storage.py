@@ -12,15 +12,18 @@ class FileStorage():
 
     def all(self):
         """dict return """
+
         return FileStorage.__objects
 
     def new(self, obj):
         """new object"""
+
         object = obj.__class__.__name__ + "." + str(obj.id)
         FileStorage.__objects[object] = obj
 
     def save(self):
         """serialize the objects to JSON"""
+
         with open(FileStorage.__file_path, "w") as file:
             dictionary = {}
             for a, b in FileStorage.__objects.items():
@@ -30,6 +33,7 @@ class FileStorage():
 
     def reload(self):
         """File deserializing"""
+        
         try:
             with open(FileStorage.__file_path, "r") as file:
                 info = json.load(file)
