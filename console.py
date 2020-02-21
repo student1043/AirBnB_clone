@@ -10,12 +10,12 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = "(hbnb) "
     mycl = {"BaseModel",
-               "User",
-               "State",
-               "City",
-               "Amenity",
-               "Place",
-               "Review"}
+            "User",
+            "State",
+            "City",
+            "Amenity",
+            "Place",
+            "Review"}
 
     def emptyline(self):
         """ Nothing when an empty line occurs """
@@ -101,7 +101,26 @@ class HBNBCommand(cmd.Cmd):
             for i in inst:
                 list.append(str(inst[i]))
             print(list)
-    
+
+    def do_update(self, inp):
+        """Update Instance"""
+        arg = inp.split()
+        if not arg:
+            print("** class name missing **")
+        if arg[0] not in self.mycl:
+            print("** class doesn't exist **")
+        if len(arg) == 1:
+            print("** instance id missing **")
+        if len(arg) == 2:
+            print("** attribute name missing **")
+        if len(arg) == 3:
+            print("** value missing **")
+        obj = storage.all()
+        k = arg[0] + "." + arg[1]
+        if k in obj:
+            storage.update(k, arg[2], arg[3])
+            storage.save()
+        print("** no instance found **")
 
 
 if __name__ == '__main__':
