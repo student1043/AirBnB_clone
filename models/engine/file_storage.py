@@ -40,3 +40,8 @@ class FileStorage():
                     self.new(object)
         except:
             pass
+
+    def delete(self, k):
+        """Delete instance"""
+
+        del self.__objects[k]

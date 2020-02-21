@@ -3,6 +3,12 @@
 import cmd
 from models import storage
 from models.base_model import BaseModel
+from models.user import User
+from models.city import City
+from models.place import Place
+from models.state import State
+from models.review import Review
+from models.amenity import Amenity
 
 
 class HBNBCommand(cmd.Cmd):
@@ -31,16 +37,18 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self, inp):
         """ Create New Instance of BaseModel """
-        if not inp:
+        try:
+            if inp:
+                name = inp.split(" ")[0]
+                newdic = eval(name+"()")
+                newdic.save()
+                print(newdic.id)
+            else:
+                raise SyntaxError
+        except SyntaxError:
             print("** class name missing **")
-            return
-        if inp not in self.mycl:
+        except NameError:
             print("** class doesn't exist **")
-            return
-        else:
-            obj = eval(inp)
-            print(obj.id)
-            storage.save()
 
     def do_show(self, inp):
         """ Shows the string representation of an instance """
