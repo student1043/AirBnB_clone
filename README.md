@@ -6,4 +6,4 @@ Starting with the project
 Aladin Bensassi
 Yassin Bahri
 
-Holberton School
+# Holberton School
