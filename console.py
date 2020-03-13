@@ -125,6 +125,7 @@ class HBNBCommand(cmd.Cmd):
         if len(arg) == 3:
             print("** value missing **")
         obj = storage.all()
+        
         k = arg[0] + "." + arg[1]
         if k in obj:
             storage.update(k, arg[2], arg[3])
