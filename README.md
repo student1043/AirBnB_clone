@@ -2,4 +2,4 @@
 # AirBnB_clone
 Starting with the project
 
-# CREATED BY:
+# Created by:
