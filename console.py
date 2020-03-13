@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """ HBNB Console """
 import cmd
 from models import storage
